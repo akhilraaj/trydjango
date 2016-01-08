@@ -1,0 +1,10 @@
+Django Snippets
+	django-admin startproject
+	django-admin startapp
+
+get curent user
+	request.user
+	request.user.is_authenticated()  --> to check wether the user  is authenticated 
+	
+create super user
+	python manage.py createsuperuser
