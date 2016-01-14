@@ -4,10 +4,11 @@ from .forms import SignupForm,ContactForm
 # Create your views here.
 def home(request):
     form=SignupForm(request.POST or None)
-    instance=form.save()
+    if form.is_valid():
+        instance=form.save()
     context={"form": form}
 
-    return render(request, "home.html",context)
+    return render(request, "base.html",context)
 
 def contact(request):
     form=ContactForm
